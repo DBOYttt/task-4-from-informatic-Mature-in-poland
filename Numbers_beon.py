@@ -16,18 +16,16 @@ inscription to ACBE.
 
 """
 
-from turtle import update
-
-
-score = 0
-
-while True:
-
-        x = {'PLEASE'}
-
-        if x == {'PLEASE'}:
-            score += 1
-        if score == 3:
-            x.clear()
-            x.update({'DELETE'})
-print(score)
+def zadanie_4_1(wejscie):
+    wynik = 0
+    for item in wejscie:
+        krok = item.split()[0]
+        if krok == 'PLEASE':
+            wynik+=1
+        if krok == 'DELETE':
+            wynik-=1
+        if krok == 'CHANGE':
+            pass
+        if krok == 'PLEASE':
+            pass
+    return wynik
